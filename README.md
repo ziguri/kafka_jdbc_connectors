@@ -67,7 +67,7 @@ kafka-topics --zookeeper localhost:2181 --delete --topic assembly_topic
 
 ## Creating the connectors
 ### Creating the source connector
-The local environment just uses one source connector, responsible for sending the information from staging table to the kafka topics.
+The local environment just uses one source connector, responsible for sending the information from T_FACTORY table to the kafka topics.
 
 To create the source connector just:
 ```bash
