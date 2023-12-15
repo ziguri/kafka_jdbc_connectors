@@ -1,7 +1,7 @@
 {
   "connector.class"                    : "io.confluent.connect.jdbc.JdbcSourceConnector",
   "dialect.name"                       : "PostgreSqlDatabaseDialect",
-  "connection.url"                     : "jdbc:postgresql://localhost:5432/kafkacdb",
+  "connection.url"                     : "jdbc:postgresql://postgres:5432/kafkacdb",
   "key.converter"                      : "org.apache.kafka.connect.json.JsonConverter",
   "key.converter.schemas.enable"       : "true",
   "value.converter"                    : "org.apache.kafka.connect.json.JsonConverter",

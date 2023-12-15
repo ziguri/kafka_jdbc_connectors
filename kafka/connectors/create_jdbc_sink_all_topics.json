@@ -1,6 +1,6 @@
 {
   "connector.class"                    : "io.confluent.connect.jdbc.JdbcSinkConnector",
-  "connection.url"                     : "jdbc:postgresql://localhost:5432/kafkacdb",
+  "connection.url"                     : "jdbc:postgresql://postgres:5432/kafkacdb",
   "topics"                             : "component_topic, part_topic, assembly_topic",
   "table.name.format"                  : "T_FACTORY",
   "key.converter"                      : "org.apache.kafka.connect.json.JsonConverter",
