@@ -1,7 +1,13 @@
-# Setup KAFKA local environment
+# Setup KAFKA Connect JDBC connectors
 
 This tutorial aims to help to setup the KAFKA local environment.
 It consists in configuring 1 Source connector and 1 Sink connector for the table T_FACTORY.
+
+## The Factory POC
+
+Along this setup you will be able to build a complete setup of local Kafka running in Docker along with a local database for testing purpose. The goal is to integrate this database table ```T_FACTORY``` with Kafka in order to see JDBC Kafka Source and Sink connectors in action.
+
+It supports the automatic streaming of messages, stored in the T_FACTORY table, into 3 different topics ```assembly_topic``` , ```component_topic``` and ```part_topic````. The result of this integration is set by a stream back from Kafka to de T_FACTORY table, managed by the JDBC Connector Sink, with the information if the message was streamed successfully for the expected topic.
 
 
 ## Requirements
@@ -61,7 +67,7 @@ kafka-topics --zookeeper localhost:2181 --delete --topic assembly_topic
 
 ## Creating the connectors
 ### Creating the source connector
-The local environment just uses one source connector, responsible for sending the information from staging table to the kafka topics.
+The local environment just uses one source connector, responsible for sending the information from T_FACTORY table to the kafka topics.
 
 To create the source connector just:
 ```bash
